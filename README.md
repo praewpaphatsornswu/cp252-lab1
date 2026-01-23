@@ -1,2 +1,2 @@
-# cp252-lab1
-Requirement
+# Requirement document
+Functional requirement
