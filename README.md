@@ -103,3 +103,39 @@
 
 ---
 
+## Use Case Diagram
+
+```mermaid
+flowchart LR
+    %% Actors
+    User((User))
+    Admin((Admin))
+
+    %% System boundary
+    subgraph Smart Parking System
+        UC1[View parking availability]
+        UC2[Reserve parking space]
+        UC3[Cancel reservation]
+        UC4[View parking fee]
+        UC5[Calculate parking fee]
+
+        UC6[Manage parking spaces]
+        UC7[Manage parking fee rate]
+        UC8[View parking usage report]
+    end
+
+    %% User use cases
+    User --> UC1
+    User --> UC2
+    User --> UC3
+    User --> UC4
+
+    %% Include relationship
+    UC4 --> UC5
+
+    %% Admin use cases
+    Admin --> UC6
+    Admin --> UC7
+    Admin --> UC8
+
+
